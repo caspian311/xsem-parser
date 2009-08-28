@@ -1,5 +1,5 @@
-require 'parse'
+require 'parser'
 
 parser = Parser.new
-parser.parse_file("asv-usfx.xml")
+parser.parse_file("data/asv-usfx.xml")
 parser.print_all
