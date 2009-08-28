@@ -1,18 +1,35 @@
 require 'rexml/document'
+require 'book'
+require 'chapter'
+require 'verse'
 
-# get the XML data as a string
-xml_file = File.new("asv-usfx.xml");
+class Parser
+	attr_reader :books
 
-# extract event information
-doc = REXML::Document.new xml_file
+	def initialize
+		@books = []
+	end
 
-books = []
-doc.elements.each('usfx/book') do |book|
-   books << book.elements["h"].text
-end
+	def parse_file(filename)
+		xml_file = File.new(filename);
+		doc = REXML::Document.new xml_file
 
-# print all events
-puts "all titles..."
-books.each do |book|
-   print "#{book}\n"
+		doc.elements.each('usfx/book') do |book|
+		   books << Book.new(book.elements["h"].text)
+		end
+	end
+
+
+	def print_all
+		puts "all titles..."
+		books.each do |book|
+			print "#{book.title}:\n"
+			book.chapters.each do |chapter|
+				print "   chapter #{chapter.id}:\n"
+				chapter.verses.each do |verse|
+					print "      #{verse.id} - #{verse.text}"
+				end
+			end
+		end
+	end
 end
