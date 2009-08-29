@@ -1,11 +1,10 @@
 
 class Verse
 	attr_reader :id
-	attr_reader :text
+	attr_accessor :text
 
-	def initialize(id,text)
+	def initialize(id)
 		@id = id
-		@text = text
 	end
 end
 
