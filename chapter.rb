@@ -3,7 +3,8 @@ class Chapter
 	attr_reader :id
 	attr_reader :verses
 
-	def initialize
+	def initialize(id)
+		@id = id
 		@verses = []
 	end
 
