@@ -1,5 +1,7 @@
-require './app/parser'
+require 'REXML/document'
+require 'app/stream_parser'
 
-parser = Parser.new
-parser.parse_file("data/asv-xsem.xml")
-parser.print_all
+include REXML
+
+parser = StreamParser.new
+Document.parse_stream(File.open('data/asv-xsem.xml'), parser)
