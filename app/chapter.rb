@@ -1,4 +1,3 @@
-
 class Chapter
 	attr_reader :id
 	attr_reader :verses

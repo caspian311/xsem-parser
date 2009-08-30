@@ -1,8 +1,8 @@
 require 'rexml/document'
 require 'rexml/streamlistener'
-require 'book'
-require 'chapter'
-require 'verse'
+require 'app/book.rb'
+require 'app/chapter'
+require 'app/verse'
 
 include REXML
 
@@ -77,8 +77,3 @@ class StreamParser
 		return value
 	end
 end
-
-myParser = StreamParser.new
-Document.parse_stream( File.open('test.xml'), myParser)
-
-myParser.print

@@ -1,4 +1,4 @@
-require 'parser'
+require './app/parser'
 
 parser = Parser.new
 parser.parse_file("data/asv-xsem.xml")

@@ -1,4 +1,3 @@
-
 class Verse
 	attr_reader :id
 	attr_accessor :text

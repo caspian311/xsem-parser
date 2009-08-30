@@ -1,5 +1,3 @@
-
-
 class Book
 	attr_reader :title
 	attr_reader :chapters
