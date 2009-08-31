@@ -5,3 +5,4 @@ include REXML
 
 parser = StreamParser.new
 Document.parse_stream(File.open('data/asv-xsem.xml'), parser)
+parser.print
