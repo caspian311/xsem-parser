@@ -1,6 +1,5 @@
 require "test/unit"
-require "app/chapter"
-require "app/verse"
+$:.unshift File.join(File.dirname(__FILE__),'..','lib')
 
 class ChapterTest < Test::Unit::TestCase
   def test_chapter_is_set

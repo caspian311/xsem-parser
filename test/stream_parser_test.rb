@@ -1,9 +1,7 @@
 require 'test/unit'
 require 'rexml/document'
-require 'app/stream_parser'
-require 'app/book'
-require 'app/chapter'
-require 'app/verse'
+
+$:.unshift File.join(File.dirname(__FILE__),'..','lib')
 
 class StreamParserTest < Test::Unit::TestCase
 	def test_parsing_test_file
