@@ -19,7 +19,9 @@ class SqlBuilder
     return generated_sql
   end
 
+  private
+
   def create_insert_statement(book, chapter, verse)
-    ''
+    return 'create this...'
   end
 end
