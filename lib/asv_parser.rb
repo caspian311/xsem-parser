@@ -10,19 +10,22 @@ include REXML
 class AsvParser
 	include StreamListener
 
-	attr_reader :books
-
-	def initialize
+	def initialize(file)
 		@books = {}
+    REXML::Document.parse_stream(file, self)
 	end
-	
+
+  def all_books
+    @books.values
+  end
+
 	def tag_start(name, attributes)
 		if name == 'bookDecl'
 			@book_id = attribute_val(attributes, 'id')
 		elsif name == 'shortName'
 			@in_book_title = true
 		elsif name == 'book'
-			@current_book = books[attribute_val(attributes, 'value')]
+			@current_book = @books[attribute_val(attributes, 'value')]
 		elsif name == 'chapter'
 			@current_chapter = Chapter.new attribute_val(attributes, 'value')
 			@current_book.add_chapter @current_chapter
@@ -50,22 +53,7 @@ class AsvParser
 		end
 	end
 
-	def print
-		puts "list of books..."
-		@books.each_value do |book|
-			puts "book: #{book.title}"
-			book.chapters.each do |chapter|
-				puts "   chapter: #{chapter.id}"
-				chapter.verses.each do |verse|
-					puts "      verse: #{verse.id}"
-					puts "         text: #{verse.text}"
-				end
-			end
-		end
-	end
-
-
-	private
+  private
 
 	def attribute_val(attributes, key)
 		value = nil
