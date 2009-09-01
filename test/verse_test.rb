@@ -1,6 +1,6 @@
-require "test/unit"
+$:.unshift File.join(File.dirname(__FILE__),'..','lib')
 
-require "lib/verse"
+require "test/unit"
 
 class VerseTest < Test::Unit::TestCase
   def test_initialize_with_id

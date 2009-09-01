@@ -7,7 +7,7 @@ require "lib/verse"
 
 include REXML
 
-class StreamParser
+class AsvParser
 	include StreamListener
 
 	attr_reader :books
