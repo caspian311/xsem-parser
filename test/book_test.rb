@@ -1,6 +1,4 @@
-$:.unshift File.join(File.dirname(__FILE__),'..','lib')
-
-require "test/unit"
+require File.dirname(__FILE__) + "/testhelper"
 
 class BookTest < Test::Unit::TestCase
   def test_book_title_is_set

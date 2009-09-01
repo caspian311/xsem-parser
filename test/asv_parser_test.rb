@@ -1,12 +1,9 @@
-$:.unshift File.join(File.dirname(__FILE__),'..','lib')
+require File.dirname(__FILE__) + "/testhelper"
 
 require "rexml/document"
-require "test/unit"
-
-require "lib/asv_parser"
 
 class AsvParserTest < Test::Unit::TestCase
-	def test_parsing_test_file
+  def test_parsing_test_file
 		parser = AsvParser.new
 		REXML::Document.parse_stream(File.open('test/test.xml'), parser)
 
