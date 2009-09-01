@@ -1,9 +1,5 @@
 require 'rexml/document'
 
-require "lib/book"
-
-include REXML
-
 class AsvParser
   attr_reader :books
 
