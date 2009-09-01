@@ -1,8 +1,9 @@
 require 'rexml/document'
 require 'rexml/streamlistener'
-require 'app/book.rb'
-require 'app/chapter'
-require 'app/verse'
+
+require "lib/book"
+require "lib/chapter"
+require "lib/verse"
 
 include REXML
 

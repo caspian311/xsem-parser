@@ -1,12 +1,15 @@
 require 'test/unit'
 require 'rexml/document'
 
-$:.unshift File.join(File.dirname(__FILE__),'..','lib')
+require "lib/stream_parser"
+require "lib/book"
+require "lib/chapter"
+require "lib/verse"
 
 class StreamParserTest < Test::Unit::TestCase
 	def test_parsing_test_file
 		parser = StreamParser.new
-		REXML::Document.parse_stream(File.open('test/unit/test.xml'), parser)
+		REXML::Document.parse_stream(File.open('test/test.xml'), parser)
 
 		genesis = parser.books['GEN']
 		matthew = parser.books['MAT']
