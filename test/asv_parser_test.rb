@@ -6,7 +6,7 @@ class AsvParserTest < Test::Unit::TestCase
   def test_parsing_test_file
 		parser = AsvParser.new File.open(File.dirname(__FILE__) + '/test.xml')
 
-    parser.all_books.each do |book|
+    parser.books.each do |book|
       if book.title == 'Genesis'
         check_genesis book
       elsif book.title == 'Matthew'
