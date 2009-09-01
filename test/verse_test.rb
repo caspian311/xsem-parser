@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + "/testhelper"
+require File.dirname(__FILE__) + "/test_helper"
 
 class VerseTest < Test::Unit::TestCase
   def test_initialize_with_id

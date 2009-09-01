@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + "/testhelper"
+require File.dirname(__FILE__) + "/test_helper"
 
 class BookTest < Test::Unit::TestCase
   def test_book_title_is_set
