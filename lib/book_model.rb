@@ -1,4 +1,4 @@
-class Book
+class BookModel
 	attr_reader :title
 	attr_reader :chapters
 

@@ -1,4 +1,4 @@
-class Verse
+class VerseModel
 	attr_reader :id
 	attr_accessor :text
 

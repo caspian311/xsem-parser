@@ -1,17 +1,17 @@
 require File.dirname(__FILE__) + "/test_helper"
 
-class BookTest < Test::Unit::TestCase
+class BookModelTest < Test::Unit::TestCase
   def test_book_title_is_set
-    b = Book.new "sometext"
+    b = BookModel.new "sometext"
     assert_equal(b.title, "sometext")
   end
 
   def test_add_chapter
-    c1 = Chapter.new 1
-    c2 = Chapter.new 2
-    c3 = Chapter.new 3
+    c1 = ChapterModel.new 1
+    c2 = ChapterModel.new 2
+    c3 = ChapterModel.new 3
 
-    b = Book.new "sometext"
+    b = BookModel.new "sometext"
     b.add_chapter c1
     b.add_chapter c2
     b.add_chapter c3

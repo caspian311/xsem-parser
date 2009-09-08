@@ -1,10 +1,10 @@
 require File.dirname(__FILE__) + "/test_helper"
 
-class ChapterTest < Test::Unit::TestCase
+class ChapterModelTest < Test::Unit::TestCase
   def test_chapter_is_set
-    c1 = Chapter.new 1
-    c2 = Chapter.new 2
-    c3 = Chapter.new 999
+    c1 = ChapterModel.new 1
+    c2 = ChapterModel.new 2
+    c3 = ChapterModel.new 999
 
     assert_equal(1, c1.id)
     assert_equal(2, c2.id)
@@ -12,10 +12,10 @@ class ChapterTest < Test::Unit::TestCase
   end
 
   def test_add_verse
-    v1 = Verse.new 1
-    v2 = Verse.new 2
-    v3 = Verse.new 999
-    c1 = Chapter.new 1
+    v1 = VerseModel.new 1
+    v2 = VerseModel.new 2
+    v3 = VerseModel.new 999
+    c1 = ChapterModel.new 1
 
     c1.add_verse v1
     c1.add_verse v2

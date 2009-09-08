@@ -1,10 +1,10 @@
 require File.dirname(__FILE__) + "/test_helper"
 
-class VerseTest < Test::Unit::TestCase
+class VerseModelTest < Test::Unit::TestCase
   def test_initialize_with_id
-    v1 = Verse.new 1
-    v2 = Verse.new 2
-    v3 = Verse.new 999
+    v1 = VerseModel.new 1
+    v2 = VerseModel.new 2
+    v3 = VerseModel.new 999
 
     assert_equal(1, v1.id)
     assert_equal(2, v2.id)
@@ -12,7 +12,7 @@ class VerseTest < Test::Unit::TestCase
   end
 
   def test_set_text
-    v1 = Verse.new 1
+    v1 = VerseModel.new 1
     v1.text = "blah blah blah"
 
     assert_equal("blah blah blah", v1.text)

@@ -1,8 +1,8 @@
 require 'rexml/streamlistener'
 
-require "lib/book"
-require "lib/chapter"
-require "lib/verse"
+require "lib/book_model"
+require "lib/chapter_model"
+require "lib/verse_model"
 
 class AsvStreamListener
   include REXML::StreamListener
@@ -21,10 +21,10 @@ class AsvStreamListener
 		elsif name == 'book'
 			@current_book = @books[attribute_val(attributes, 'value')]
 		elsif name == 'chapter'
-			@current_chapter = Chapter.new attribute_val(attributes, 'value')
+			@current_chapter = ChapterModel.new attribute_val(attributes, 'value')
 			@current_book.add_chapter @current_chapter
 		elsif name == 'verse'
-			@current_verse = Verse.new attribute_val(attributes, 'value')
+			@current_verse = VerseModel.new attribute_val(attributes, 'value')
 			@current_chapter.add_verse @current_verse
 			@in_verse = true
 		elsif name == 'verseEnd'
@@ -34,7 +34,7 @@ class AsvStreamListener
 
 	def tag_end(name)
 		if name == 'bookDecl'
-			@books[@book_id] = Book.new @book_title
+			@books[@book_id] = BookModel.new @book_title
 		end
 	end
 
