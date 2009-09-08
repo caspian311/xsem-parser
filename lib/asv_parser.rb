@@ -3,10 +3,12 @@ require 'rexml/document'
 class AsvParser
   attr_reader :books
 
-  def initialize(file)
-    stream_listener = AsvStreamListener.new
-    REXML::Document.parse_stream(file, stream_listener)
+  def initialize
+    @stream_listener = AsvStreamListener.new
+  end
 
-    @books = stream_listener.books.values
+  def parse(file)
+    REXML::Document.parse_stream(file, @stream_listener)
+    @books = @stream_listener.books.values
   end
 end
