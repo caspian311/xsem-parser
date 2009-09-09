@@ -5,6 +5,4 @@ ActiveRecord::Base.establish_connection(
       :database => 'bible_test',
       :host => '127.0.0.1',
       :username => 'root',
-      :password => 'root',
-      :pool => '5',
-      :timeout => '5000')
+      :password => 'root')
