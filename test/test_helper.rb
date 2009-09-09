@@ -1,5 +1,6 @@
 $:.unshift File.join(File.dirname(__FILE__),'..','lib')
 
+require File.dirname(__FILE__) + "/../lib/bible"
 require File.dirname(__FILE__) + "/../lib/book"
 require File.dirname(__FILE__) + "/../lib/chapter"
 require File.dirname(__FILE__) + "/../lib/verse"

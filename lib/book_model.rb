@@ -8,7 +8,7 @@ class BookModel
 	end
 
 	def add_chapter(chapter)
-		@chapters += [chapter]
+		@chapters << chapter
 	end
 end
 

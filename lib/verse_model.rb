@@ -1,9 +1,9 @@
 class VerseModel
-	attr_reader :id
+	attr_reader :reference
 	attr_accessor :text
 
-	def initialize(id)
-		@id = id
+	def initialize(reference)
+		@reference = reference
 	end
 end
 

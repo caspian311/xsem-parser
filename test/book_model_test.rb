@@ -17,8 +17,8 @@ class BookModelTest < Test::Unit::TestCase
     b.add_chapter c3
 
     assert_equal(3, b.chapters.size)
-    assert_equal(1, b.chapters[0].id)
-    assert_equal(2, b.chapters[1].id)
-    assert_equal(3, b.chapters[2].id)
+    assert_equal(1, b.chapters[0].reference)
+    assert_equal(2, b.chapters[1].reference)
+    assert_equal(3, b.chapters[2].reference)
   end
 end
