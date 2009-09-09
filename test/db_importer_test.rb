@@ -1,9 +1,5 @@
 require File.dirname(__FILE__) + "/test_helper"
 
-require 'test/unit'
-require 'db_importer'
-require 'connection_info'
-
 class DbImporterTest < Test::Unit::TestCase
   def setup
     Book.all.each do |book|
