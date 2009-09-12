@@ -15,5 +15,5 @@ end
 
 desc 'Install the ASV Bible into the db (takes a while)'
 task :install do
-   sh "ruby -Ilib lib/run.rb"
+   sh "ruby -Ilib lib/load.rb"
 end
