@@ -1,8 +1,4 @@
 require 'active_record'
 
-ActiveRecord::Base.establish_connection(
-      :adapter => 'mysql',
-      :database => 'bible_test',
-      :host => '127.0.0.1',
-      :username => 'root',
-      :password => 'root')
+db_config = YAML::load(File.open(File.dirname(__FILE__) + '/../config/test.yml'))
+ActiveRecord::Base.establish_connection(db_config)

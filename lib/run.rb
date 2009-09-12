@@ -9,12 +9,8 @@ require "book"
 require "chapter"
 require "verse"
 
-ActiveRecord::Base.establish_connection(
-      :adapter => 'mysql',
-      :database => 'bible',
-      :host => '127.0.0.1',
-      :username => 'root',
-      :password => 'root')
+db_config = YAML::load(File.open(File.dirname(__FILE__) + '/../config/prod.yml'))
+ActiveRecord::Base.establish_connection(db_config)
 
 parser = XsemParser.new
 parser.parse File.dirname(__FILE__) + '/../data/asv.xml'
