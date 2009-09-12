@@ -17,7 +17,7 @@ ActiveRecord::Base.establish_connection(
       :password => 'root')
 
 parser = XsemParser.new
-parser.parse File.open(File.dirname(__FILE__) + '/../data/asv-xsem.xml')
+parser.parse File.dirname(__FILE__) + '/../data/asv.xml'
 
 bible_model = BibleModel.new 'ASV'
 bible_model.long_name = 'American Standard Version'

@@ -5,7 +5,7 @@ require "rexml/document"
 class XsemParserTest < Test::Unit::TestCase
   def test_parsing_test_file
 		parser = XsemParser.new
-    parser.parse File.open(File.dirname(__FILE__) + '/test.xml')
+    parser.parse File.dirname(__FILE__) + '/test.xml'
 
     parser.books.each do |book|
       if book.title == 'Genesis'

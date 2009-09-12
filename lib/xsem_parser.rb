@@ -7,7 +7,8 @@ class XsemParser
     @stream_listener = XsemStreamListener.new
   end
 
-  def parse(file)
+  def parse(filename)
+    file = File.open(filename)
     REXML::Document.parse_stream(file, @stream_listener)
     @books = @stream_listener.books.values
   end
