@@ -13,11 +13,11 @@ db_config = YAML::load(File.open(File.dirname(__FILE__) + '/../config/prod.yml')
 ActiveRecord::Base.establish_connection(db_config)
 
 parser = XsemParser.new
-parser.parse File.dirname(__FILE__) + '/../data/asv.xml'
 
-bible_model = BibleModel.new 'ASV'
-bible_model.long_name = 'American Standard Version'
-bible_model.books = parser.books
+ARGV.each do |data_file|
+	bible = parser.parse data_file
 
-importer = DbImporter.new bible_model
-importer.import_into_db
+	importer = DbImporter.new bible
+	importer.import_into_db
+end
+
