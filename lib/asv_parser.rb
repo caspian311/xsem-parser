@@ -3,8 +3,8 @@ require 'rexml/document'
 class AsvParser
   attr_reader :books
 
-  def initialize(stream_listener)
-    @stream_listener = stream_listener
+  def initialize
+    @stream_listener = AsvStreamListener.new
   end
 
   def parse(file)

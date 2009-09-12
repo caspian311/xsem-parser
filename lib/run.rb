@@ -1,13 +1,22 @@
-require 'lib/AsvParser'
-require 'lib/AsvStreamListener'
-require 'lib/DbImporter'
-require 'lib/BibleModel'
+require 'active_record'
 
-Bible.all.each do |bible|
-  bible.destroy
-end
+require "asv_parser"
+require "asv_stream_listener"
+require "bible_model"
+require "db_importer"
+require "bible"
+require "book"
+require "chapter"
+require "verse"
 
-parser = AsvParser.new(AsvStreamListener.new)
+ActiveRecord::Base.establish_connection(
+      :adapter => 'mysql',
+      :database => 'bible',
+      :host => '127.0.0.1',
+      :username => 'root',
+      :password => 'root')
+
+parser = AsvParser.new
 parser.parse File.open(File.dirname(__FILE__) + '/../data/asv-xsem.xml')
 
 bible_model = BibleModel.new 'ASV'

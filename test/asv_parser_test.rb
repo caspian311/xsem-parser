@@ -4,7 +4,7 @@ require "rexml/document"
 
 class AsvParserTest < Test::Unit::TestCase
   def test_parsing_test_file
-		parser = AsvParser.new(AsvStreamListener.new)
+		parser = AsvParser.new
     parser.parse File.open(File.dirname(__FILE__) + '/test.xml')
 
     parser.books.each do |book|
