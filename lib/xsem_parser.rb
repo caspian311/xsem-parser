@@ -1,10 +1,10 @@
 require 'rexml/document'
 
-class AsvParser
+class XsemParser
   attr_reader :books
 
   def initialize
-    @stream_listener = AsvStreamListener.new
+    @stream_listener = XsemStreamListener.new
   end
 
   def parse(file)

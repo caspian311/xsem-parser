@@ -1,7 +1,7 @@
 require 'active_record'
 
-require "asv_parser"
-require "asv_stream_listener"
+require "xsem_parser"
+require "xsem_stream_listener"
 require "bible_model"
 require "db_importer"
 require "bible"
@@ -16,7 +16,7 @@ ActiveRecord::Base.establish_connection(
       :username => 'root',
       :password => 'root')
 
-parser = AsvParser.new
+parser = XsemParser.new
 parser.parse File.open(File.dirname(__FILE__) + '/../data/asv-xsem.xml')
 
 bible_model = BibleModel.new 'ASV'

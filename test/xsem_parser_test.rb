@@ -2,9 +2,9 @@ require File.dirname(__FILE__) + "/test_helper"
 
 require "rexml/document"
 
-class AsvParserTest < Test::Unit::TestCase
+class XsemParserTest < Test::Unit::TestCase
   def test_parsing_test_file
-		parser = AsvParser.new
+		parser = XsemParser.new
     parser.parse File.open(File.dirname(__FILE__) + '/test.xml')
 
     parser.books.each do |book|

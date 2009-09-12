@@ -4,7 +4,7 @@ require "lib/book_model"
 require "lib/chapter_model"
 require "lib/verse_model"
 
-class AsvStreamListener
+class XsemStreamListener
   include REXML::StreamListener
 
   attr_reader :books
