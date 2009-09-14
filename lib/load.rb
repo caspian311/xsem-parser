@@ -20,4 +20,3 @@ ARGV.each do |data_file|
 	importer = DbImporter.new bible
 	importer.import_into_db
 end
-
