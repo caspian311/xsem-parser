@@ -5,9 +5,12 @@ require "rexml/document"
 class XsemParserTest < Test::Unit::TestCase
   def test_parsing_test_file
 		parser = XsemParser.new
-    parser.parse File.dirname(__FILE__) + '/test.xml'
+    bible = parser.parse File.dirname(__FILE__) + '/test.xml'
 
-    parser.books.each do |book|
+    assert_equal  "ASV", bible.short_name
+    assert_equal  "The American Standard Version of the Holy Bible (1901)", bible.long_name
+
+    bible.books.each do |book|
       if book.title == 'Genesis'
         check_genesis book
       elsif book.title == 'Matthew'

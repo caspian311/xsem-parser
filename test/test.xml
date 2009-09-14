@@ -1,56 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
 <scripture>
-	<scriptureHeader>
-		<bookDecl id="GEN">
-			<shortName>Genesis</shortName>
-			<longName>blah blah</longName>
-		</bookDecl>
-		<bookDecl id="MAT">
-			<shortName>Matthew</shortName>
-			<longName>blah blah blah</longName>
-		</bookDecl>
-	</scriptureHeader>
-	<canon id="OT" value="OT">
-		<book value="GEN">
-			<text>
-				<chapter value="1" />
-				<verse value="1" />
+    <scriptureHeader>
+        <versionStmt>
+            <versionDecl id="ASV">
+                <versionName>The American Standard Version of the Holy Bible (1901)</versionName>
+                <versionAbbreviation>ASV</versionAbbreviation>
+            </versionDecl>
+        </versionStmt>
+        <bookDecl id="GEN">
+            <shortName>Genesis</shortName>
+            <longName>blah blah</longName>
+        </bookDecl>
+        <bookDecl id="MAT">
+            <shortName>Matthew</shortName>
+            <longName>blah blah blah</longName>
+        </bookDecl>
+    </scriptureHeader>
+    <canon id="OT" value="OT">
+        <book value="GEN">
+            <text>
+                <chapter value="1" />
+                <verse value="1" />
 					In the beginning God created the heavens and the earth.
-				<verseEnd />
-				<verse value="2" />
+                <verseEnd />
+                <verse value="2" />
 					And the earth was waste and void; and darkness was upon the face of the deep: and the Spirit of God moved upon the face of the waters.
-				<verseEnd />
-				<chapterEnd />
-				<chapter value="2" />
-				<verse value="1" />
+                <verseEnd />
+                <chapterEnd />
+                <chapter value="2" />
+                <verse value="1" />
 					And the heavens and the earth were finished, and all the host of them.
-				<verseEnd />
-				<verse value="2" />
+                <verseEnd />
+                <verse value="2" />
 					And on the seventh day God finished his work which he had made; and he rested on the seventh day from all his work which he had made.
-				<verseEnd />
-				<chapterEnd />
-			</text>
-		</book>
-	</canon>
-	<canon id="NT" value="NT">
-		<book value="MAT">
-			<text>
-				<chapter value="1" />
-				<verse value="1" />
+                <verseEnd />
+                <chapterEnd />
+            </text>
+        </book>
+    </canon>
+    <canon id="NT" value="NT">
+        <book value="MAT">
+            <text>
+                <chapter value="1" />
+                <verse value="1" />
 					The book of the generation of Jesus Christ, the son of David, the son of Abraham.
-				<verseEnd />
-				<verse value="2" />
+                <verseEnd />
+                <verse value="2" />
 					Abraham begat Isaac; and Isaac begat Jacob; and Jacob begat Judah and his brethren;
-				<verseEnd />
-				<chapterEnd />
-				<chapter value="2" />
-				<verse value="1" />
+                <verseEnd />
+                <chapterEnd />
+                <chapter value="2" />
+                <verse value="1" />
 					Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, Wise-men from the east came to Jerusalem, saying,
-				<verseEnd />
-				<verse value="2" />
+                <verseEnd />
+                <verse value="2" />
 					Where is he that is born King of the Jews? for we saw his star in the east, and are come to worship him.
-				<verseEnd />
-				<chapterEnd />
-			</text>
-		</book>
-	</canon>
+                <verseEnd />
+                <chapterEnd />
+            </text>
+        </book>
+    </canon>
 </scripture>
