@@ -1,1 +1,8 @@
-this is a parser for the asb bible text available at http://ebible.org/asv
+this is a parser for the xsem xml format of the bible 
+
+all public domain texts are available at http://ebible.org
+
+i inlucded asv, kjv, and web translations just to get started
+
+a copy of the NASB can be obtained by contacting the Lockman Foundation (lockman.org)
+and a copy of the NIV can be obtained by contacting Zondervan (zondervan.org)
