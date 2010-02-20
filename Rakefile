@@ -18,3 +18,9 @@ task :install do
    ARGV.shift
    sh "ruby -Ilib lib/load.rb " + ARGV.join(" ")
 end
+
+desc 'Write the ASV file to a pipe formatted file'
+task :pipe do
+   ARGV.shift
+   sh "ruby -Ilib lib/pipe_file_writer.rb " + ARGV.join(" ")
+end
