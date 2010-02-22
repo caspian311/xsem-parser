@@ -28,14 +28,26 @@ many columns in some of the tables.  i'll fix it someday... maybe...
 --------------------------------------------------------------------------------
                                    Usage 
 --------------------------------------------------------------------------------
-to create a relational database
+1. run all the tests
+
+$ rake
+
+
+2. to create a relational database
 
 $ rake install <input-file>
 
-to creae a pipe separated file:
+
+3. to creae a pipe separated file:
 
 $ rake pipe <input-file> <output-file>
 
-all input files can be found in the data directory
+(all input files can be found in the data directory)
 
+
+4. run the build in a ci environment
+
+$ rake ci:setup:testunit test CI_REPORTS=results
+
+(all test results will go into the results directory)
 --------------------------------------------------------------------------------
