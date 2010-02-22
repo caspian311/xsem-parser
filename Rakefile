@@ -2,6 +2,9 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/packagetask'
 require 'find'
+require 'rubygems'
+gem 'ci_reporter'
+require 'ci/reporter/rake/test_unit'
  
 desc 'Default: run unit tests.'
 task :default => :test

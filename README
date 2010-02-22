@@ -1,8 +1,41 @@
-this is a parser for the xsem xml format of the bible 
+--------------------------------------------------------------------------------
+                              Background Info
+--------------------------------------------------------------------------------
 
-all public domain texts are available at http://ebible.org
+this is a parser for the xsem xml format of the bible. its purpose is to get the
+text from xsem to something useful like a relational database or a special 
+character delimited file.
 
-i inlucded asv, kjv, and web translations just to get started
+all texts found in the data directory are public domain texts and are available 
+at http://ebible.org.  i inlucded asv, kjv, and web translations just to get 
+started.
 
-a copy of the NASB can be obtained by contacting the Lockman Foundation (lockman.org)
-and a copy of the NIV can be obtained by contacting Zondervan (zondervan.org)
+a copy of the NASB can be obtained by contacting the Lockman Foundation 
+(lockman.org) and a copy of the NIV can be obtained by contacting Zondervan 
+(zondervan.org)
+
+--------------------------------------------------------------------------------
+                                 Disclaimer
+--------------------------------------------------------------------------------
+
+i'm terrible at ruby.  i just wanted to start a project that seemed useful at 
+the time.  so that's all this is.
+
+there needs to be a database created named bible_test for the tests to run.  the 
+sql for the tables in that database is found in db.sql.  i think there are too 
+many columns in some of the tables.  i'll fix it someday... maybe...
+
+--------------------------------------------------------------------------------
+                                   Usage 
+--------------------------------------------------------------------------------
+to create a relational database
+
+$ rake install <input-file>
+
+to creae a pipe separated file:
+
+$ rake pipe <input-file> <output-file>
+
+all input files can be found in the data directory
+
+--------------------------------------------------------------------------------
